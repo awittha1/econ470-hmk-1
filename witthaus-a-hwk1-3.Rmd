@@ -4,8 +4,70 @@ author: "Alexia Witthaus Viñé"
 date: "2023-01-29"
 output: pdf_document
 ---
+```{r, warning = FALSE, echo = FALSE, message = FALSE}
+load("Hwk1_workspace.Rdata")
+library(lemon)
+knit_print.data.frame <- lemon_print
+library(tidyverse)
+library(readr)
+library(imputeTS)
+knitr::opts_chunk$set(echo = FALSE, message=FALSE, warning = FALSE, fig.width = 16/2, fig.height = 9/2, tidy.opts=list(width.cutoff=60), tidy=TRUE)
+```
 
 
 # Question 1 
 
-There are `r nrow(full_ma)` plans. 
+There exist `r format(nrow(full.ma.data), big.mark = ",")` observations in my dataset. 
+
+# Question 2 
+
+There exist `r length(unique(full.ma.data$plan_type)) -1 ` different data types
+
+# Question 3 
+
+```{r, render = lemon_print}
+q_3_df <- na_replace(q_3_df, 0)
+q_3_df <- q_3_df[-27,]
+q_3_df
+```
+
+# Question 4 
+```{r, render = lemon_print}
+q_4_df<- na_replace(q_4_df, 0)
+q_4_df<- q_4_df[-17,]
+q_4_df
+```
+
+# Question 5 
+
+```{r}
+graph_q5
+```
+
+
+# Question 6 
+
+```{r}
+graph_q6
+```
+
+
+# Question 7 
+
+```{r}
+graph_q7
+```
+
+# Question 8 
+
+800-series plans are plans offered to employer and group union group sponsors. I believe we might have removed these observations from the dataset, since these might not be representative from a Medicare user. 
+
+# Question 9 
+
+So many plans charge a $0 premium, because it is an additional premium to pay in addition to the Plan B premium. Government funding pays insurers to allow this to happen, and for beneficiaries this means that there might be higher out-of pocket costs, or that other benefits such as certain prescription drug coverage are not included. 
+
+# Question 10 
+
+For me, working with the data was a little frustrating, especially since at the beginning, I didn't really know what I was doing. The first data set took very long to run, and I am not used to working with datasets that are so big. Once I started working with the data (once I did this right), the dataset becamse more manageble and easier to work with. 
+
+
