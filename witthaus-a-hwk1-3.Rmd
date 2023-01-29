@@ -1,0 +1,11 @@
+---
+title: "Homework 1 - Research in Health Economics"
+author: "Alexia Witthaus Viñé"
+date: "2023-01-29"
+output: pdf_document
+---
+
+
+# Question 1 
+
+There are `r nrow(full_ma)` plans. 
