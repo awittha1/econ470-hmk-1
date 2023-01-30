@@ -21,7 +21,7 @@ There exist `r format(nrow(full.ma.data), big.mark = ",")` observations in my da
 
 # Question 2 
 
-There exist `r length(unique(full.ma.data$plan_type)) -1 ` different data types
+There exist `r length(unique(full.ma.data$plan_type)) -1 ` different plan types
 
 # Question 3 
 
